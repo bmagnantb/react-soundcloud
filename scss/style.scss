@@ -74,7 +74,10 @@
  */
 
 img {max-width:100%;}
-
+html {
+	height: 100%;
+}
 body {
     transition: opacity .25s ease;
+    min-height: 100%;
 }
