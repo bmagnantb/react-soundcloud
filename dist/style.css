@@ -835,6 +835,10 @@ abbr[title]:hover {
     content: "";
     font-size: medium; }
 
+@media only screen and (min-width: 0px) {
+  .grid-3-0 > * {
+    width: 31.33333%; } }
+
 @media only screen and (min-width: 400px) {
   .grid-2-400 > * {
     width: 48%; } }
@@ -885,4 +889,52 @@ body {
   -webkit-transition: opacity .25s ease;
           transition: opacity .25s ease;
   min-height: 100%; }
+
+.main {
+  max-width: 35em;
+  margin: 1em auto; }
+
+h6 {
+  margin: .5em 0; }
+
+.time {
+  position: relative;
+  text-align: center; }
+  .time input[type=range] {
+    width: 100%; }
+  .time h6 {
+    width: 3em;
+    position: absolute;
+    top: -.2em; }
+    .time h6:first-of-type {
+      left: -3.5em; }
+    .time h6:last-of-type {
+      right: -3.5em; }
+
+.control {
+  margin-bottom: 1rem; }
+  .control > * {
+    vertical-align: middle; }
+  .control input[type=checkbox] {
+    display: none; }
+  .control label {
+    text-align: center; }
+
+div.volume {
+  display: inline-block;
+  text-align: center; }
+
+input.volume {
+  display: block;
+  width: 5em;
+  margin: 0 auto; }
+
+label.volume {
+  display: block; }
+
+.stats h6 {
+  display: inline-block;
+  padding: 0 1em; }
+  .stats h6:first-child {
+    padding-left: 0; }
 

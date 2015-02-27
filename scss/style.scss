@@ -1,7 +1,6 @@
 @import "../bower_components/normalize-scss/_normalize.scss";
 @import "../bower_components/typeplate-starter-kit/css/_typeplate.scss";
 @import "./mixins.scss";
-
 /**
  * BOX-SIZING
  */
@@ -9,7 +8,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
 /**
  * GRIDS
  */
@@ -20,7 +18,6 @@
     font-size: 0;
     text-align: justify;
     position: relative;
-
     & > * {
         font-size: medium;
         text-align: left;
@@ -28,7 +25,6 @@
         width: 100%;
         vertical-align: top;
     }
-
     &:after {
         display: inline-block;
         width: 100%;
@@ -36,10 +32,9 @@
         font-size: medium;
     }
 }
-
+@include gridify(3, 0);
 @include gridify(2, 400);
 @include gridify(4, 600);
-
 /**
  * PACE (automatic pre-loader thingy)
  */
@@ -49,15 +44,12 @@
     user-select: none;
     transition: all 1s ease;
 }
-
 .pace-inactive {
     opacity: 0;
 }
-
 .pace-active {
     opacity: 1;
 }
-
 .pace .pace-progress {
     background: #2299dd;
     position: fixed;
@@ -68,16 +60,75 @@
     height: 2px;
     transition: all 1s ease;
 }
-
 /**
  * GENERAL
  */
 
-img {max-width:100%;}
+img {
+    max-width: 100%;
+}
 html {
-	height: 100%;
+    height: 100%;
 }
 body {
     transition: opacity .25s ease;
     min-height: 100%;
+}
+.main {
+    max-width: 35em;
+    margin: 1em auto;
+}
+h6 {
+    margin: .5em 0;
+}
+.time {
+		position: relative;
+    text-align: center;
+    input[type=range] {
+        width: 100%;
+    }
+    h6 {
+        width: 3em;
+        position: absolute;
+        top: -.2em;
+        &:first-of-type {
+        	left: -3.5em;
+        }
+        &:last-of-type {
+        	right: -3.5em;
+        }
+    }
+}
+.control {
+    margin-bottom: 1rem;
+    & > * {
+    	vertical-align: middle;
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+    label {
+    	text-align: center;
+    }
+}
+div.volume {
+    display: inline-block;
+    text-align: center;
+}
+input.volume {
+    display: block;
+    width: 5em;
+    margin: 0 auto;
+}
+label.volume {
+		display: block;
+}
+.stats {
+	h6 {
+		display: inline-block;
+		padding: 0 1em;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
 }
