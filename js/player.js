@@ -88,7 +88,6 @@
         },
         pause: function(e) {
             if(e) e.target.blur();
-        		console.log('pausing');
             this.props.model.get('stream').pause();
             this.setState({
             		paused: true
@@ -105,7 +104,9 @@
         		e.target.blur();
         		this.props.model.get('stream').stop();
         		this.props.model.get('stream').start();
-        		if (this.state.paused) this.props.model.get('stream').pause();
+        		if (this.state.paused) this.setState({
+        			paused: false
+        		});
         },
         skip: function(e){
         		e.target.blur();
