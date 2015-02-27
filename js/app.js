@@ -22,7 +22,7 @@ function app(){
         // {url: "./bower_components/parse-js-sdk/lib/parse.min.js"},
 
         // when using React (and the plugin JSnoX), uncomment the following two lines
-        {url: "./bower_components/react/react.js"},
+        {url: "./bower_components/react/react.min.js"},
         {url: "./bower_components/jsnox/index.js"},
 
         // other stuff
@@ -42,7 +42,7 @@ function app(){
         document.querySelector("html").style.opacity = 1;
         // start app?
 
-        new Backbone.PlayerRouter();
+        window.router = new Backbone.PlayerRouter();
     });
 
 }
